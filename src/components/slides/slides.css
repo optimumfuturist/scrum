@@ -1,0 +1,124 @@
+/**
+ * Slides Custom CSS
+ */
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+.opacity:not(.active) {
+    opacity: 0;
+}
+.staffs:not(.active) {
+  opacity: 0.01;
+}
+.circle#title,
+.circle {
+    background: #ffeb3b;
+    line-height: 1.1;
+    color: black;
+    padding: 10rem  5rem;
+    border-radius: 4% 50% 0% 70%;
+    box-shadow: rgb(191 197 202) 10px 10px, rgba(0,0,0,0.3) 30px 30px;
+}
+
+#starter {
+  background: black;
+  color: hsla(0, 0%, 0%, .9);
+  left: 0;
+  letter-spacing: 5px;
+  position: absolute;
+  text-align: center;
+  font: normal 140px Varela Round, sans-serif;
+  text-transform: uppercase;
+  animation: move linear 2000ms infinite;
+}
+
+#starter p {
+  margin-top: 14rem;
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+      0.1rem -0.1rem 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1),
+      2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -0.1rem 0.1rem 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1),
+      -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {
+    text-shadow:
+      -0.1rem -0.1rem 0 hsla(180, 100%, 50%, 1),
+      -3px -3px 0 hsla(180, 100%, 50%, 1),
+      -2px -2px 0 hsla(180, 100%, 50%, 1),
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      0.1rem 0.1rem 0 hsla(0, 100%, 50%, 1),
+      3px 3px 0 hsla(0, 100%, 50%, 1),
+      2px 2px 0 hsla(0, 100%, 50%, 1),
+      1px 1px 0 hsla(0, 100%, 50%, 1)
+    ;
+  }
+  50% {
+    text-shadow:
+      -0.1rem 0.1rem 0 hsla(0, 100%, 50%, 1),
+      -3px 3px 0 hsla(0, 100%, 50%, 1),
+      -2px 2px 0 hsla(0, 100%, 50%, 1),
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      0.1rem -0.1rem 0 hsla(180, 100%, 50%, 1),
+      3px -3px 0 hsla(180, 100%, 50%, 1),
+      2px -2px 0 hsla(180, 100%, 50%, 1),
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      0.1rem 0.1rem 0 hsla(180, 100%, 50%, 1),
+      3px 3px 0 hsla(180, 100%, 50%, 1),
+      2px 2px 0 hsla(180, 100%, 50%, 1),
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -0.1rem -0.1rem 0 hsla(0, 100%, 50%, 1),
+      -3px -3px 0 hsla(0, 100%, 50%, 1),
+      -2px -2px 0 hsla(0, 100%, 50%, 1),
+      -1px -1px 0 hsla(0, 100%, 50%, 1)
+    ;
+  }
+  100% {
+    text-shadow:
+      0.1rem -0.1rem 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1),
+      2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -0.1rem 0.1rem 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1),
+      -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+}
+
+.brand {
+  line-height: 1.5;
+  background: black;
+  font-size: 3rem;
+}
+.brand p {
+    margin-top: 10rem;
+}
+.brand h2 {
+  text-shadow: none;
+  background: linear-gradient(90deg, #a2763d, #fbf3a4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 7rem;
+}
+
+.brand h3 {
+  display: inline;
+  color: black;
+  font-size: 100%;
+  font-family:Varela Round, sans-serif;
+  text-transform: uppercase;
+  animation: move linear 2000ms infinite;
+}
