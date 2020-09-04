@@ -17,20 +17,18 @@ const getStaffs = () => {
     let staff = '';
     const opts = staffs.sort(() => Math.random() - 0.5).map((staff, index) => {
         const gap = index * Math.ceil(Math.random() * 1000);
-        const rotate = Math.ceil(Math.random() * 400);
-        const scale = Math.floor(Math.random() * (30 - 3 + 1) + 3);
+        const scale = Math.floor(Math.random() * (15 - 6 + 1) + 6);
         return {
             id: 'staff_' + index,
             className: "staffs",
             data: {
-                x: 1400 + gap,
-                y: 2200 + gap,
-                z: -3000,
-                rotateZ: rotate,
+                x: 1100 + gap,
+                y: 1100 + gap,
+                z: -2000,
                 scale: scale,
             },
             content: [
-                <p>{staff}</p>,
+                <h2>{staff}</h2>,
             ]
         }
     });
@@ -44,10 +42,11 @@ const options = [
         data: {
             x: 1000,
             y: -1500,
+            scale: 2
         },
         content: [
-            <p className="brand-of">Welcom to <h3 style={{textDecoration: 'line-through'}}>Jumanji</h3></p>,
-            <h2 className="try"><strong>Catch</strong> Up <strong>Time</strong></h2>
+            <p className="brand-of">Welcome to</p>,
+            <h2 className="try"><strong>Daily</strong> Scrum</h2>
         ]
     },
     {
@@ -76,30 +75,7 @@ const options = [
                 pss, next <strong>please</strong>?</p>
         ]
     },
-    {
-        id: "big",
-        data: {
-            x: 3500,
-            y: 2100,
-            rotateZ: 180,
-            scale: 1
-        },
-        content: [
-            <p>starting <b>now</b> <span className="thoughts">...</span></p>
-        ]
-    },
     ...getStaffs(),
-    {
-        id: "one-more-thing",
-        data: {
-            x: 6000,
-            y: 4000,
-            scale: 2
-        },
-        content: [
-            <p>one more thing...</p>
-        ]
-    },
     {
         id: "qsts",
         data: {
@@ -111,8 +87,8 @@ const options = [
             scale: 2
         },
         content: [
-            <p><span className="have">Anybody</span> <span className="you">has</span> <span
-                className="noticed">any</span> <b>questions<sup>*</sup></b>?</p>
+            <h1><span className="have">Anybody</span> <span className="you">has</span> <span
+                className="noticed">any</span> <b>questions<sup>*</sup></b>?</h1>
         ]
     },
     {
@@ -120,11 +96,11 @@ const options = [
         className: "opacity",
         data: {
             x: 6200,
-            y: 4500,
+            y: 5000,
             z: -100,
             rotateX: -40,
             rotateY: 10,
-            scale: 3
+            scale: 4
         },
         content: [
             <span className="footnote">* nope? all-righty then ;)</span>
@@ -134,7 +110,7 @@ const options = [
         className: "step opacity",
         data: {
             x: 3000,
-            y: 1500,
+            y: 500,
             z: 0,
             scale: 10
         },

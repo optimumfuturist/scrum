@@ -5,9 +5,18 @@ import 'react-impressjs/styles/react-impressjs.css';
 import './slides.css';
 import options from './options';
 
+const rootOptions = {
+    width: 1200,
+    height: 900,
+    maxScale: 1,
+    minScale: 0,
+    perspective: 1000,
+    transitionDuration: 1000
+};
+
 const Slides = () => {
     return (
-        <Impress progress={true}>
+        <Impress progress={true} rootData={rootOptions} hint={false}>
       {
         options.map( (opt, index ) => {
           return (
