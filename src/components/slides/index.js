@@ -5,7 +5,7 @@ import 'react-impressjs/styles/react-impressjs.css';
 import './slides.css';
 import options from './options';
 
-const Index = () => {
+const Slides = () => {
     return (
         <Impress progress={true}>
       {
@@ -34,4 +34,4 @@ const Index = () => {
     );
 }
 
-export { Index };
+export { Slides };
