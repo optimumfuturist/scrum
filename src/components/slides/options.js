@@ -2,10 +2,9 @@ import React from 'react';
 
 const staffs = [
     'Aishan Shrestha',
-    'Bijay Runiyar',
+    'Bijay Rauniyar',
     'Diwan Adhikari',
-    'Prashant Shrestha',
-    'Praveen Sharma',
+    // 'Praveen Sharma',
     'Pritishma Tuladhar',
     'Sanchita Tiwari',
     'Saroz K. Poddar',
@@ -17,7 +16,7 @@ const getStaffs = () => {
     let staff = '';
     const opts = staffs.sort(() => Math.random() - 0.5).map((staff, index) => {
         const gap = index * Math.ceil(Math.random() * 1000);
-        const scale = Math.floor(Math.random() * (15 - 6 + 1) + 6);
+        const scale = Math.floor(Math.random() * (11 - 6 + 1) + 6);
         return {
             id: 'staff_' + index,
             className: "staffs",
@@ -50,18 +49,6 @@ const options = [
         ]
     },
     {
-        id: "title",
-        className: "circle",
-        data: {
-            scale: 2
-        },
-        content: [
-            <span className="try">New way to report - </span>,
-            <h1>Randomly<sup></sup></h1>,
-            <span className="footnote">called names</span>
-        ]
-    },
-    {
         id: "its",
         data: {
             x: 850,
@@ -70,9 +57,8 @@ const options = [
             scale: 5
         },
         content: [
-            <p><strong>What are you working on</strong> <br/>
-                any <a>any blocks?</a> <br/>
-                pss, next <strong>please</strong>?</p>
+            <p><strong>What are you working on?</strong> <br/>
+                any <a>any blocks?</a> <br/></p>
         ]
     },
     ...getStaffs(),
@@ -84,28 +70,14 @@ const options = [
             z: -100,
             rotateX: -40,
             rotateY: 10,
-            scale: 2
+            scale: 10
         },
         content: [
-            <h1><span className="have">Anybody</span> <span className="you">has</span> <span
-                className="noticed">any</span> <b>questions<sup>*</sup></b>?</h1>
+            <h1><strong><span className="have">Q</span></strong><span className="you">&</span><span
+                className="noticed">A</span></h1>
         ]
     },
     {
-        id: "okthen",
-        className: "opacity",
-        data: {
-            x: 6200,
-            y: 5000,
-            z: -100,
-            rotateX: -40,
-            rotateY: 10,
-            scale: 4
-        },
-        content: [
-            <span className="footnote">* nope? all-righty then ;)</span>
-        ]
-    }, {
         id: "thankyou",
         className: "step opacity",
         data: {
