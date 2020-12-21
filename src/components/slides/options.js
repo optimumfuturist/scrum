@@ -1,7 +1,6 @@
 import React from 'react';
 
 const staffs = [
-    'Aishan Shrestha',
     'Bijay Rauniyar',
     'Diwan Adhikari',
     // 'Praveen Sharma',
@@ -57,8 +56,8 @@ const options = [
             scale: 5
         },
         content: [
-            <p><strong>What are you working on?</strong> <br/>
-                any <a>any blocks?</a> <br/></p>
+            <p style={{'textAlign': 'left'}}>How to report? <br /><strong> - Describe what you working on</strong> <br/>
+                and - <a>any blocks?</a> <br/></p>
         ]
     },
     ...getStaffs(),
