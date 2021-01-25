@@ -1,21 +1,21 @@
 import React from 'react';
 
 const staffs = [
-    'Bijay Rauniyar',
-    'Diwan Adhikari',
-    // 'Praveen Sharma',
-    'Pritishma Tuladhar',
-    'Sanchita Tiwari',
-    'Saroz K. Poddar',
-    'Shekhar K. Sharma',
+    ['Bijay', 'Ozzy 🙂'],
+    ['Diwan', 'Rare breed, baun 🥷'],
+    ['Shyam', 'Adri 👨‍💻'],
+    ['Pritishma', 'Buttercup 🤩'],
+    ['Sanchita', 'Blossoms 🐒'],
+    ['Saroz', 'Devil guy 🤑'],
+    ['Shekhar', 'Never-grumper ✌🏻'],
 ];
 
 const getStaffs = () => {
 
-    let staff = '';
     const opts = staffs.sort(() => Math.random() - 0.5).map((staff, index) => {
         const gap = index * Math.ceil(Math.random() * 1000);
         const scale = Math.floor(Math.random() * (11 - 6 + 1) + 6);
+
         return {
             id: 'staff_' + index,
             className: "staffs",
@@ -26,10 +26,11 @@ const getStaffs = () => {
                 scale: scale,
             },
             content: [
-                <h2>{staff}</h2>,
+                <h2>{staff[0]} <strong>{staff[1]}</strong></h2>,
             ]
         }
     });
+
     return opts;
 }
 
@@ -56,8 +57,8 @@ const options = [
             scale: 5
         },
         content: [
-            <p style={{'textAlign': 'left'}}>How to report? <br /><strong> - Describe what you working on</strong> <br/>
-                and - <a>any blocks?</a> <br/></p>
+            <p style={{'textAlign': 'left'}}>How to report? <br /><strong> - Describe what you're working on</strong> <br/>
+                and - <span className="btn-block">inform any roadblocks?</span> <br/></p>
         ]
     },
     ...getStaffs(),

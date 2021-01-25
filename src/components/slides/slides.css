@@ -6,6 +6,7 @@
 .opacity:not(.active) {
     opacity: 0;
 }
+
 .staffs:not(.active) {
   opacity: 0.01;
 }
@@ -33,6 +34,32 @@
 
 #starter p {
   margin-top: 14rem;
+}
+
+.impress-enabled .step .btn-block {
+  color: hsla(0,0%,100%,.8);
+  text-decoration: none;
+  padding: 0 .4em;
+  background: #3e4852;
+  border-radius: .2em;
+  transition: all .5s;
+}
+
+.impress-enabled .step:not(.active) {
+  z-index: -1;
+}
+
+.impress-enabled .step.active {
+  z-index: 9999;
+}
+
+.step h2 {
+  line-height: 1.2;
+}
+
+.step h2 > strong {
+  display: block;
+  font-size: 70%;
 }
 
 @keyframes move {

@@ -2,6 +2,7 @@ import React from 'react';
 import {Impress, Step} from 'react-impressjs';
 import 'react-impressjs/styles/react-impressjs.css';
 
+
 import './slides.css';
 import options from './options';
 
@@ -16,7 +17,7 @@ const rootOptions = {
 
 const Slides = () => {
     return (
-        <Impress progress={true} rootData={rootOptions} hint={false}>
+        <Impress progress={true} rootData={rootOptions} hint={true}>
       {
         options.map( (opt, index ) => {
           return (
