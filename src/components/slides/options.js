@@ -1,13 +1,14 @@
 import React from 'react';
 
 const staffs = [
-    ['Bijay', 'Ozzy 🙂'],
-    ['Diwan', 'Rare breed, baun 🥷'],
-    ['Shyam', 'Adri 👨‍💻'],
-    ['Pritishma', 'Buttercup 🤩'],
-    ['Sanchita', 'Blossoms 🐒'],
-    ['Saroz', 'Devil guy 🤑'],
-    ['Shekhar', 'Never-grumper ✌🏻'],
+    ['Bijay', 'Sleephead 🙂'],
+    ['Diwan', 'Slacker 🥷'],
+    ['Shyam', 'Kid from the past week 👨‍💻'],
+    ['Pritishma', 'Taker 🤩'],
+    ['Sanchita', 'Lady clamper 🐒'],
+    ['Saroz', 'Willspire 🤑'],
+    ['Shekhar', 'Wannabe ✌🏻'],
+    ['Suman', 'New kid on the block ✌🏻'],
 ];
 
 const getStaffs = () => {
