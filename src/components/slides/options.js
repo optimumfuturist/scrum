@@ -49,7 +49,7 @@ const staffs = [
   ["Saroz 😈"],
   ["Shekhar ✌🏻"],
   ["Suman 🏓"],
-//   ["Sabina"],
+  ["Sabina 🤓"],
 //   ["Praveen"],
 ];
 
