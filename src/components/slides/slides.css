@@ -55,11 +55,12 @@
 }
 
 .step h2 {
-  line-height: 1.2;
+  line-height: 0.8;
 }
 
 .step h2 > strong {
-  font-size: 70%;
+  font-size: 50%;
+  font-weight: normal;
 }
 
 .step.large-title h2 {
@@ -160,4 +161,9 @@
   font-family:Varela Round, sans-serif;
   text-transform: uppercase;
   animation: move linear 2000ms infinite;
+}
+
+.slide {
+  width: 1400px;
+  height: 800px;
 }

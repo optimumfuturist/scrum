@@ -40,17 +40,20 @@ const nicknames = [
   "Ronin",
   "Wardon",
 ];
+
+const emojis = [ '🐧', '🎈', '🤓', '👀', '🧟‍♀️', '🐶', '🍎', '🏓', '🌈', '🦄', '🦾', '👑', '🪖', '🧳', '👠', '👞', '🥽', '🌾', '🦥', '⚡️', '🥒', '🥟', '🍕', '🍥', '🫑', '🌽', '🍾', '🧊', '🎽', '🎧', '🛵', '🏨', '🌌', '⚱️', '🧬', '🪑']
 const staffs = [
-  ["Bijay 🙂"],
-  ["Diwan 🥷"],
-  ["Shyam 👨‍💻"],
-  ["Pritishma 🤩"],
-  ["Sanchita 🐒"],
-  ["Saroz 😈"],
-  ["Shekhar ✌🏻"],
-  ["Suman 🏓"],
-  ["Sabina 🤓"],
-//   ["Praveen"],
+  'Bijay',
+  'Diwan',
+  'Shyam',
+  'Pritishma',
+  'Sanchita',
+  'Saroz',
+  'Shekhar',
+  'Suman',
+  'Sabina',
+  'Niranjan',
+//   'Praveen',
 ];
 
 const getRndInteger = (min, max) => {
@@ -63,6 +66,7 @@ const getStaffs = () => {
       const gap = index * Math.ceil(Math.random() * 1000);
       const scale = getRndInteger(6, 11);
       const rotateZ = getRndInteger(15, 320)
+      console.log(staff);
 
       return {
         id: "staff_" + index,
@@ -75,7 +79,7 @@ const getStaffs = () => {
           scale,
         },
         content: [
-          <h2> {staff[0]}<br /><strong>{nicknames[getRndInteger(index, nicknames.length)]}</strong></h2>,
+          <h2> {staff} {emojis[getRndInteger(index, emojis.length - 1)]}<br /><strong>{nicknames[getRndInteger(index, nicknames.length - 1)]}</strong></h2>,
         ],
       };
     });

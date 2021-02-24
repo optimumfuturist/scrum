@@ -7,11 +7,11 @@ import './slides.css';
 import options from './options';
 
 const rootOptions = {
-    width: 1200,
+    width: 1600,
     height: 900,
     maxScale: 1,
     minScale: 0,
-    perspective: 1000,
+    perspective: 1400,
     transitionDuration: 1000
 };
 
