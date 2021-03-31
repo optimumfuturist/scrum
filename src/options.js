@@ -53,7 +53,13 @@ const staffs = [
   'Suman',
   'Sabina',
   'Niranjan',
-//   'Praveen',
+  'Praveen',
+  'Sunil',
+  'Kapoor',
+  'Basanta',
+  'Bibek',
+  'Sandesh',
+  'Prajwol'
 ];
 
 const getRndInteger = (min, max) => {
