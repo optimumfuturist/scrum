@@ -17,29 +17,29 @@ const rootOptions = {
 
 const Slides = () => {
     return (
-        <Impress progress={true} rootData={rootOptions} hint={true}>
-      {
-        options.map( (opt, index ) => {
-          return (
-            React.createElement( Step, {
-              id: opt.id,
-              className: opt.className,
-              data: opt.data,
-              key: index
-            },
+      <Impress progress={true} rootData={rootOptions} hint={true}>
+        {
+          options.map( (opt, index ) => {
+            return (
+              React.createElement( Step, {
+                id: opt.id,
+                className: opt.className,
+                data: opt.data,
+                key: index
+              },
 
-            opt.content.map( (child, index) => {
-              return (
-                React.cloneElement( child, {
-                  id: child.id,
-                  className: child.className,
-                  key: index
-                })
-              );
-            }))
-          );
-        })
-      }
+              opt.content.map( (child, index) => {
+                return (
+                  React.cloneElement( child, {
+                    id: child.id,
+                    className: child.className,
+                    key: index
+                  })
+                );
+              }))
+            );
+          })
+        }
       </Impress>
     );
 }
