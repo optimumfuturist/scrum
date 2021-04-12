@@ -69,20 +69,19 @@ const getStaffs = () => {
   const opts = staffs
     .sort(() => Math.random() - 0.5)
     .map((staff, index) => {
-      const gap = index * Math.ceil(Math.random() * 1000);
-      const scale = getRndInteger(6, 11);
-      const rotateZ = getRndInteger(15, 320)
-      console.log(staff);
+      // const gap = index * Math.ceil(Math.random() * 1000);
+      // const scale = getRndInteger(6, 11);
+      // const rotateZ = getRndInteger(15, 320)
 
       return {
         id: "staff_" + index,
         className: "staffs",
         data: {
-          x: 2100 + gap,
-          y: 2100 + gap,
+          x: 2100, //+ gap,
+          y: 2100, //+ gap,
           z: -2000,
-          rotateZ,
-          scale,
+          // rotateZ,
+          scale: 1.4
         },
         content: [
           <h2> {staff} {emojis[getRndInteger(index, emojis.length - 1)]}<br /><strong>{nicknames[getRndInteger(index, nicknames.length - 1)]}</strong></h2>,
