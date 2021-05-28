@@ -9,3 +9,11 @@ body {
 #react-impressjs {
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 }
+
+.pinned {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  font-size: 3rem;
+  text-decoration: none;
+}

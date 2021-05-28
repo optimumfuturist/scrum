@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Slides } from "./components/slides";
-// import { List } from "./components/lists";
-import { Button } from './components/btn'
+import { List } from "./components/lists";
+import { Button, IconLink } from './components/btn'
 import "./App.css";
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          {/* <Route path="/" exact>
+          <Route path="/list" exact>
             <List />
-          </Route> */}
+          </Route>
           <Route path="/">
             <Slides />
           </Route>
@@ -26,6 +26,7 @@ function App() {
             </section>
           </Route>
         </Switch>
+        <IconLink to="/list" className="pinned"><span role="img" aria-label="Settings">⚙️</span></IconLink>
       </div>
     </Router>
   );

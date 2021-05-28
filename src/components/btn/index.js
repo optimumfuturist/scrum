@@ -11,4 +11,10 @@ const Button = ({text, to}) => {
   );
 }
 
-export { Button };
+const IconLink = ({className, children, to}) => {
+  return (
+    <Link className={className} to={to}>{children}</Link>
+  );
+}
+
+export { Button, IconLink };

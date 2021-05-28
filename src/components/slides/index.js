@@ -4,7 +4,7 @@ import 'react-impressjs/styles/react-impressjs.css';
 
 
 import './slides.css';
-import options from '../../options';
+import options from './options';
 
 const rootOptions = {
     width: 1600,

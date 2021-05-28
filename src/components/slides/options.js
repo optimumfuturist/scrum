@@ -2,46 +2,6 @@ import React from "react";
 // import logo from '../../../public/color-logo.svg';
 const logoUrl = `${process.env.PUBLIC_URL}/color-logo.svg`;
 
-const nicknames = [
-  "Bullet-Proof",
-  "Ironsides",
-  "Maximus",
-  "Jesse James",
-  "Bludgeon",
-  "Sledgehammer",
-  "Quarterstaff",
-  "Claymore",
-  "Wolf",
-  "Boomslang",
-  "Goshawk",
-  "Enchantress",
-  "Roulette",
-  "Stiletto",
-  "Artemis",
-  "Marquess",
-  "Malevolence",
-  "Vainglory",
-  "Crucible",
-  "Spellbinder",
-  "Kelpie",
-  "Poltergeist",
-  "Exorcist",
-  "Kelpie",
-  "Elemental",
-  "Chromium",
-  "Redox",
-  "Serpent",
-  "Supernova",
-  "Snake Eyes",
-  "Arbitrage",
-  "Explosive",
-  "Ratchet",
-  "Roadkill",
-  "Ronin",
-  "Wardon",
-];
-
-const emojis = [ '🐧', '🎈', '🤓', '👀', '🧟‍♀️', '🐶', '🍎', '🏓', '🌈', '🦄', '🦾', '👑', '🪖', '🧳', '👠', '👞', '🥽', '🌾', '🦥', '⚡️', '🥒', '🥟', '🍕', '🍥', '🫑', '🌽', '🍾', '🧊', '🎽', '🎧', '🛵', '🏨', '🌌', '⚱️', '🧬', '🪑'];
 
 const staffs = [
   'Bijay',
@@ -61,29 +21,30 @@ const staffs = [
   'Prajwol'
 ];
 
-const getRndInteger = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const friday = <div className="stepbox stepbox--large"><h2 className="tgif">TGIF </h2><br /><span className="em-1" aria-label="Party Gilter" role="img">🎉</span>&nbsp;&nbsp;<span className="em-2" aria-label="Party Balloons" role="img">🎊</span>&nbsp;&nbsp;<span className="em-3" aria-label="Party Beer" role="img">🍻</span>&nbsp;&nbsp;<span className="em-4" aria-label="Pingpong" role="img">🏓</span></div>;
+
+const isFriday = (new Date()).toDateString().indexOf('Fri') >= 0;
+
+const lastPage = isFriday ? friday : <h2>Thank You</h2>
+
 const getStaffs = () => {
   const opts = staffs
     .sort(() => Math.random() - 0.5)
     .map((staff, index) => {
-      // const gap = index * Math.ceil(Math.random() * 1000);
-      // const scale = getRndInteger(6, 11);
-      // const rotateZ = getRndInteger(15, 320)
 
       return {
         id: "staff_" + index,
         className: "staffs",
         data: {
-          x: 2100, //+ gap,
-          y: 2100, //+ gap,
+          x: 2100 + (index * 3 + 210), //+ gap,
+          y: 1100 + (index * 150), //+ gap,
           z: -2000,
-          // rotateZ,
-          scale: 1.4
+          rotateY: 30 + (index * 3 + 210),
+          rotateX: 120 + (index * 1 + 210),
+          scale: 1.8,
         },
         content: [
-          <h2> {staff} {emojis[getRndInteger(index, emojis.length - 1)]}<br /><strong>{nicknames[getRndInteger(index, nicknames.length - 1)]}</strong></h2>,
+          <><div className="stepbox"><h2> {staff} </h2></div></>,
         ],
       };
     });
@@ -96,16 +57,17 @@ const options = [
     id: "start",
     className: "slide brand",
     data: {
-      x: 1000,
-      y: -1500,
+      x: 300,
+      y: -200,
       scale: 2,
     },
     content: [
       <img src={logoUrl} alt="Optimum Futurist" />,
-      <p className="brand-of">Workday</p>,
+      <p className="brand-of">Daily</p>,
       <h2 className="try">
         Scrum
       </h2>,
+      <p>Total Attendees: #{staffs.length}</p>
     ],
   },
   {
@@ -155,7 +117,7 @@ const options = [
       scale: 3,
     },
     content: [
-      <h2>Thank You</h2>,
+      <>{lastPage}</>,
     ],
   },
 ];
