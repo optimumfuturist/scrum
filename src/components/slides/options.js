@@ -10,7 +10,6 @@ const staffs = [
   'Sanchita',
   'Shekhar',
   'Suman',
-  'Sabina',
   'Niranjan',
   'Praveen',
   'Sunil',
