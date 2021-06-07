@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/scrum">
       <div className="App">
         <Switch>
           <Route path="/list" exact>
