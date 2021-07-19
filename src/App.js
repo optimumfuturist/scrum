@@ -10,6 +10,7 @@ function App() {
   return (
     <Router basename="/scrum">
       <div className="App">
+        <IconLink to="/list" className="pinned"><span role="img" aria-label="Settings">⚙️</span></IconLink>
         <Switch>
           <Route path="/list" exact>
             <List />
@@ -26,7 +27,6 @@ function App() {
             </section>
           </Route>
         </Switch>
-        <IconLink to="/list" className="pinned"><span role="img" aria-label="Settings">⚙️</span></IconLink>
       </div>
     </Router>
   );

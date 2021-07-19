@@ -17,3 +17,8 @@ body {
   font-size: 3rem;
   text-decoration: none;
 }
+
+.impress-enabled .hint,
+.impress-enabled .mobile-hint {
+  z-index: 999;
+}

@@ -40,15 +40,21 @@ code {
   font-family: Varela Round, sans-serif;
 }
 
+.btn-wrap {
+  margin: 0 auto;
+  display: flex;
+  max-width: 25rem;
+  padding: 2rem;
+  justify-content: space-between;
+}
 .pushable {
   position: relative;
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
-  display: block;
-  width: 14rem;
-  margin: 5rem auto 0;
+  display: inline-block;
+  min-width: 10rem;
   text-decoration: none;
   font-weight: bold;
   font-family: Varela Round, sans-serif;
@@ -82,6 +88,13 @@ code {
   color: white;
   background: hsl(345deg 100% 47%);
   transform: translateY(-4px);
+}
+
+.sec .front {
+  background: hsl(211deg 59% 12%)
+}
+.sec .edge {
+  background-color: black;
 }
 
 .pushable:hover .front {
