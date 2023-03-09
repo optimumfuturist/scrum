@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { Impress, Step } from "react-impressjs";
 import "react-impressjs/styles/react-impressjs.css";
 import localforage from "localforage";
@@ -19,18 +19,19 @@ const rootOptions = {
 
 const Slides = () => {
   const [persons, setPersons] = useState([]);
-  let history = useHistory();
+  const navigate = useNavigate();
+
 
 
   useEffect(() => {
     localforage.getItem(LF_KEYS.PERSONS).then((v) => {
       setPersons(v);
       if(!v || v.length === 0) {
-        history.push('/list');
+        navigate('/list');
       }
 
     });
-  }, []);
+  }, [navigate]);
 
   const allSteps = makeSteps(persons);
   

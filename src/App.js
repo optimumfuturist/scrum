@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Slides } from "./components/slides";
 import { List } from "./components/lists";
@@ -11,22 +11,18 @@ function App() {
     <Router basename="/scrum">
       <div className="App">
         <IconLink to="/list" className="pinned"><span role="img" aria-label="Settings">⚙️</span></IconLink>
-        <Switch>
-          <Route path="/list" exact>
-            <List />
-          </Route>
-          <Route path="/">
-            <Slides />
-          </Route>
-          <Route>
+        <Routes>
+          <Route path="/list" element={<List />} exact />
+          <Route path="/" element={<Slides />} />
+          <Route element={
             <section className="page">
               <div className="page-card">
                 <h1 className="title">Not Found</h1>
                 <Button to="/" text="Go Home" />
               </div>
             </section>
-          </Route>
-        </Switch>
+          }/>
+        </Routes>
       </div>
     </Router>
   );
