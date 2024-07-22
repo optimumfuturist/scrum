@@ -1,3 +1,6 @@
+[![CodeQL](https://github.com/optimumfuturist/scrum/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/optimumfuturist/scrum/actions/workflows/github-code-scanning/codeql)
+[![Build](https://github.com/optimumfuturist/scrum/actions/workflows/build.yml/badge.svg)](https://github.com/optimumfuturist/scrum/actions/workflows/build.yml)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
